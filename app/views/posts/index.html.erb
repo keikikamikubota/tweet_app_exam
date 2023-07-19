@@ -1,2 +1,23 @@
-<h1>Posts#index</h1>
-<p>Find me in app/views/posts/index.html.erb</p>
+<h1>ブログ一覧</h1>
+
+<table>
+  <tr>
+    <th>タイトル</th>
+    <th>内容</th>
+  </tr>
+
+<% @posts.each do |post| %>
+  <tr>
+    <td><%= post.title %></td>
+    <td><%= post.content %></td>
+
+    <td><%= link_to '詳細を確認する', post_path(post.id) %></td>
+    <td><%= link_to "ツブヤキを編集する", edit_post_path(post.id) %></td>
+    <td><%= link_to 'ツブヤキを削除する', post_path(post.id), method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br>
+
+<%= link_to '新しくツブヤキを投稿する', new_post_path %>

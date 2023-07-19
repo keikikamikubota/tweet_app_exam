@@ -1,2 +1,5 @@
-<h1>Posts#show</h1>
-<p>Find me in app/views/posts/show.html.erb</p>
+<h1>ツブヤキ詳細画面</h1>
+<p>タイトル: <%= @post.title %></p>
+<p>内容: <%= @post.content %></p>
+
+<%= link_to '一覧に戻る', posts_path %>
