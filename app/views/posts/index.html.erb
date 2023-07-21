@@ -1,4 +1,4 @@
-<h1>ブログ一覧</h1>
+<h1>ツブヤキ一覧</h1>
 
 <table>
   <tr>
@@ -10,7 +10,6 @@
   <tr>
     <td><%= post.title %></td>
     <td><%= post.content %></td>
-
     <td><%= link_to '詳細を確認する', post_path(post.id) %></td>
     <td><%= link_to "ツブヤキを編集する", edit_post_path(post.id) %></td>
     <td><%= link_to 'ツブヤキを削除する', post_path(post.id), method: :delete %></td>

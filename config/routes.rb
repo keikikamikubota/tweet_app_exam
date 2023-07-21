@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
-  get 'posts/show'
-  get 'posts/index'
-  get 'posts/new'
-  get 'posts/edit'
-  resources :posts
+  resources :posts do
+    collection do
+      post :confirm
+    end
+  end
 end
