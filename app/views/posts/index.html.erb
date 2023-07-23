@@ -15,4 +15,5 @@
 <% end %>
 </table>
 <br>
-<%= link_to '新しくツブヤキを投稿する', new_post_path %>
+# <%= link_to '新しくツブヤキを投稿する', new_post_path %>
+<%= button_to 'ユーザー登録', { controller: 'posts', action: 'new' }, { method: :get } %>
