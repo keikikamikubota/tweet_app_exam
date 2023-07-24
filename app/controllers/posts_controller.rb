@@ -34,6 +34,8 @@ class PostsController < ApplicationController
     @post = Post.find(params[:id])
     if @post.update(post_params)
       redirect_to posts_path, notice: "ツブヤキを編集しました！"
+    else
+      render :edit
     end
   end
 
